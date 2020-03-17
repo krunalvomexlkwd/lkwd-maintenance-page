@@ -1,0 +1,155 @@
+body,
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: rgb(47, 21, 69);
+    background: -moz-linear-gradient(180deg, rgba(47, 21, 69, 1) 60%, rgba(0, 0, 0, 1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(47, 21, 69, 1) 60%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(180deg, rgba(47, 21, 69, 1) 60%, rgba(0, 0, 0, 1) 100%);
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: -5% 0 0 0;
+    padding: 0;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@font-face {
+    font-family: 'FatFrank';
+    src: url("../fonts/fatfrank.eot");
+    src: url("../fonts/fatfrank.eot?#iefix") format("embedded-opentype"), url("../fonts/fatfrank.ttf") format("truetype"), url("../fonts/fatfrank.woff2") format("woff2"), url("../fonts/fatfrank.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("../fonts/roboto.eot");
+    src: url("../fonts/roboto.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto.ttf") format("truetype"), url("../fonts/roboto.woff2") format("woff2"), url("../fonts/roboto.woff") format("woff"), url("../fonts/roboto.svg#roboto") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("../fonts/roboto-light.eot");
+    src: url("../fonts/roboto-light.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-light.ttf") format("truetype"), url("../fonts/roboto-light.woff2") format("woff2"), url("../fonts/roboto-light.woff") format("woff"), url("../fonts/roboto-light.svg#robotoLight") format("svg");
+    font-weight: 300;
+    font-style: normal;
+}
+
+h1 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 50px;
+    text-align: center;
+    font-family: FatFrank;
+    letter-spacing: 3px;
+}
+
+.text {
+    width: 100%;
+    max-width: 900px;
+}
+
+p {
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 300;
+    line-height: 1.5;
+    padding: 0 5%;
+}
+
+.gear1-mr {
+    margin-right: 30px;
+}
+
+.gear2-ml {
+    margin-left: 30px;
+}
+
+#gear1 {
+    animation-name: ckw;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 50%;
+    display: inline-block;
+    animation-timing-function: linear;
+}
+
+#gear2 {
+    animation-name: ccw;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 50%;
+    display: inline-block;
+    animation-timing-function: linear;
+}
+
+@keyframes ckw {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes ccw {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.icon {
+    bottom: 0;
+    position: absolute;
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 2.0em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    .icon {
+        margin-bottom: 10px;
+    }
+}
